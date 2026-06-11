@@ -1,0 +1,873 @@
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#ab1178;
+    color:#100c0e;
+    line-height:1.5;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    background:#bc2797;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+}
+
+.logo{
+    color:rgb(14, 109, 160);
+    font-size:40px;
+    font-weight:bold;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:21px;
+}
+
+nav ul li a{
+    color:rgba(9, 13, 3, 0.973);
+    text-decoration:none;
+    font-weight:bold;
+}
+
+nav ul li a:hover{
+    color:#eab0eb;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    height:100vh;
+
+    background-image:url("images/backgr.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    color:#073d74;
+}
+
+.hero h1{
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+    color:rgb(11, 15, 20);
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e7e9ee;
+}
+
+/* =========================
+   ABOUT EEE
+========================= */
+
+.about-eee{
+    background:rgb(203, 32, 178);
+    padding:60px 30px;
+    text-align:center;
+}
+
+.about-eee h2{
+    color:#f6f3f3;
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.about-eee p{
+    max-width:1000px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.page-title{
+    text-align:center;
+    margin:30px 0;
+    color:#100a12;
+    font-size:40px;
+}
+
+/* =========================
+   COMPONENT GRID
+========================= */
+
+.component-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:25px;
+    padding:30px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+    background:rgb(243, 241, 246);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card h2{
+    padding:15px;
+    color:#0d47a1;
+}
+
+.card h3{
+    padding-left:15px;
+    margin-top:10px;
+}
+
+.card p{
+    padding:0 15px 15px;
+}
+
+.card ul{
+    padding:0 35px 20px;
+}
+
+.card li{
+    margin-bottom:5px;
+}
+
+.card-link{
+    text-decoration:none;
+    color:black;
+}
+
+/* =========================
+   DETAILS PAGE
+========================= */
+
+.details-container{
+    width:85%;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.detail-image{
+    width:500px;
+    max-width:100%;
+    display:block;
+    margin:20px auto;
+    border-radius:10px;
+}
+
+.details-container h1{
+    text-align:center;
+    color:#0d47a1;
+}
+
+.details-container h2{
+    margin-top:20px;
+    color:#1565c0;
+}
+
+.details-container p,
+.details-container li{
+    font-size:18px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-container{
+    max-width:1000px;
+    margin:auto;
+    padding:50px;
+    line-height:1.8;
+}
+
+.about-container h1{
+    text-align:center;
+    color:#0d47a1;
+    margin-bottom:20px;
+}
+
+.about-container h2{
+    color:#1565c0;
+    margin-top:25px;
+}
+
+.about-container ul{
+    margin-left:30px;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact{
+    width:600px;
+    max-width:90%;
+    margin:50px auto;
+
+    background:white;
+    padding:30px;
+
+    border-radius:12px;
+    box-shadow:0 0 10px rgba(0,0,0,0.15);
+}
+
+.contact h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#0d47a1;
+}
+
+.contact form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact input,
+.contact textarea{
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.contact textarea{
+    height:150px;
+}
+
+.contact button{
+    background:#1565c0;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.contact button:hover{
+    background:#0d47a1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+    }
+
+    nav ul{
+        margin-top:10px;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .page-title{
+        font-size:30px;
+    }
+}
+/* Make all card images same size */
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    display:block;
+}
+
+/* Equal card height */
+
+.card{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+}
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    background:lch(93.15% 2.14 19.26);
+}
+/* =========================
+   INSTRUMENTS PAGE
+========================= */
+
+.page-title{
+    text-align:center;
+    font-size:45px;
+    color:#661561;
+    margin:30px 0;
+}
+
+.component-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+    padding:30px;
+}
+
+.card{
+    background:hwb(180 98% 1%);
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h2{
+    text-align:center;
+    color:hsla(349, 97%, 38%, 0.852);
+    padding:15px;
+    font-size:28px;
+}
+
+.card h3{
+    color:#0952a5;
+    padding-left:15px;
+    margin-top:10px;
+    font-size:20px;
+}
+
+.card p{
+    padding:0 15px 10px;
+    color:#110d0d;
+}
+
+.card ul{
+    padding:0 35px 15px;
+}
+
+.card li{
+    margin-bottom:5px;
+    color:#030101;
+}
+body{
+    background:#d5dbe0;
+}
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:contain;
+    background:white;
+    padding:10px;
+}
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:contain;
+    background:#fff;
+    padding:10px;
+    
+}
+.card img{
+    height:150px;
+}
+.card{
+    padding:10px;
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:contain;
+}
+
+.card h2{
+    font-size:22px;
+}
+
+.card h3{
+    font-size:18px;
+}
+
+.card p,
+.card li{
+    font-size:14px;
+}
+/* ==========================
+   VOLTBYTE HOME PAGE
+========================== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* NAVBAR */
+
+nav{
+    background:#f8d7e8;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    box-shadow:0 2px 15px rgba(0,0,0,0.1);
+}
+
+.logo{
+    font-size:55px;
+    font-weight:bold;
+    color:#5e3a4d;
+}
+
+/* MENU */
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#5e3a4d;
+    font-size:20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#c05a8b;
+}
+
+/* HERO SECTION */
+
+.hero{
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+
+
+/* MAIN TITLE */
+
+.hero h1{
+    font-size:80px;
+    color:white;
+    margin-bottom:20px;
+
+    text-shadow:
+    2px 2px 10px rgba(0,0,0,0.4);
+}
+
+/* DESCRIPTION */
+
+.hero p{
+    font-size:28px;
+    color:white;
+    margin-bottom:30px;
+}
+
+/* BUTTON */
+
+.hero button{
+    background:#f8d7e8;
+    color:#4e1433;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.hero button:hover{
+
+    background:white;
+
+    transform:translateY(-5px);
+
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* ANIMATION */
+
+.overlay{
+    animation:fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        padding:15px;
+    }
+
+    .logo{
+        font-size:35px;
+    }
+
+    nav ul{
+        margin-top:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav ul li{
+        margin:10px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .overlay{
+        padding:25px;
+    }
+
+    .hero button{
+        font-size:16px;
+    }
+}
+/* ===== SMALL NAVBAR ===== */
+
+nav{
+    padding: 10px 40px;
+    height: 80px;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+}
+
+nav ul li a{
+    font-size: 18px;
+}
+
+/* ===== HERO FULL SCREEN ===== */
+
+.hero{
+    height: calc(100vh - 80px);
+    margin-top: 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ===== HERO CONTENT ===== */
+
+.hero h1{
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero p{
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+/* ===== BUTTON ===== */
+
+.hero button{
+    padding: 15px 35px;
+    font-size: 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* ===== REMOVE EXTRA SPACE ===== */
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+}
+.hero{
+    background-size: cover;
+    background-position: center;
+}
+.card-btn{
+    display:block;
+    width:80%;
+    margin:15px auto 20px;
+    padding:12px;
+    background:#29a4b7;
+    color:white;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card-btn:hover{
+    background:#010c11;
+    transform:scale(1.05);
+}
+/* ABOUT EEE */
+.about-container{
+    margin-top:10px;
+}
+
+.about-container{
+    max-width:1100px;
+    margin:20px auto;
+    padding:30px;
+    background:#f7f5f5;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-container h1{
+    text-align:center;
+    font-size:42px;
+    color:#3f103c;
+    margin-bottom:15px;
+}
+
+.about-container h2{
+    color:#ad1da3;
+    margin-top:20px;
+    margin-bottom:8px;
+    border-left:4px solid #0b0708;
+    padding-left:10px;
+}
+
+.about-container p{
+    font-size:17px;
+    line-height:1.6;
+    color:#501b1b;
+    text-align:justify;
+    margin-bottom:10px;
+}
+
+.about-container ul{
+    margin-left:25px;
+    margin-bottom:10px;
+}
+
+.about-container li{
+    margin-bottom:5px;
+    line-height:1.5;
+}
+
+.about-container .btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    background:#0d82ac;
+    color:rgb(98, 11, 104);
+    text-decoration:none;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+.about-container .btn:hover{
+    background:#b7a5ab;
+}
+
+body{
+    background:hwb(348 91% 7%);
+}
+/* About EEE Two Column Layout */
+
+.about-container{
+    max-width:1200px;
+    margin:20px auto;
+    padding:30px;
+}
+
+.about-container h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.about-container h2{
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+/* Make lists horizontal */
+
+.about-container ul{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px 40px;
+    margin-left:20px;
+}
+
+/* Better paragraph spacing */
+
+.about-container p{
+    text-align:justify;
+    line-height:1.6;
+    margin-bottom:15px;
+}
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    background:#e8c9d8;
+}
+
+.logo{
+    font-size:48px;
+    font-weight:bold;
+    color:#800d48;
+}
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:50px;   /* Equal space between all menu items */
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+nav ul li{
+    margin:0;
+    padding:0;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#762a52;
+    font-size:20px;
+    font-weight:600;
+}
